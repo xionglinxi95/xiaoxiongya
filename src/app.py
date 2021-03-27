@@ -6,7 +6,7 @@ from service.user import UserService
 
 app = Flask(__name__)
 host = "127.0.0.1"
-port = 5000
+port = 8082
 
 
 @app.route('/xiong', methods=['GET'])
