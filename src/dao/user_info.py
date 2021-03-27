@@ -32,7 +32,7 @@ class UserInfoDao:
             'username': username,
             'password': password,
         }
-        cls.db.executable.execute(sql, params)
+        cls.db.query(sql, params)
 
 
 if __name__ == '__main__':

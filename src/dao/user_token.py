@@ -16,7 +16,7 @@ class UserTokenDao:
             'token': token,
             'expire_time': expire_time,
         }
-        cls.db.executable.execute(sql, params)
+        cls.db.query(sql, params)
 
     @classmethod
     def get_token_info(cls, token):
@@ -28,4 +28,4 @@ class UserTokenDao:
 
     @classmethod
     def delete_token_info(cls, token):
-        cls.db.executable.execute('delete from user_token where token = :token;', {"token": token})
+        cls.db.query('delete from user_token where token = :token;', {"token": token})
