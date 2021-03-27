@@ -6,7 +6,7 @@ import dataset
 
 class UserTokenDao:
 
-    db = dataset.connect('mysql://root:12345678@127.0.0.1/get_start')
+    db = dataset.connect('mysql://root:12345678@localhost/get_start')
 
     @classmethod
     def create_token(cls, uid, token, expire_time):
