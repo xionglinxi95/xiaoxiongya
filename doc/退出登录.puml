@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+|前端|
+start
+:退出登录;
+:点击退出登录;
+:请求退出登录页面;
+|后端|
+:从cookie获取token;
+:删除token;
+|数据库|
+:delete token;
+|后端|
+:告诉前端删除cookie中的token;
+:临时重定向到登录页面;
+|前端|
+:删除cookie中的token;
+:跳转登录页面;
+stop
+@enduml
