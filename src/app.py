@@ -5,7 +5,7 @@ from flask import Flask, request, make_response, redirect, render_template
 from service.user import UserService
 
 app = Flask(__name__)
-host = "127.0.0.1"
+host = "0.0.0.0"
 port = 8082
 
 
