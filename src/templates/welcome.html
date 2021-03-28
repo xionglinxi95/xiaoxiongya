@@ -9,7 +9,8 @@
     <br>
     <div align="center">
         {% if user.get('uid') %}
-        <a href="/logout">退出登录</a>
+        <a href="/note"> <button>笔记列表</button></a>
+        <a href="/logout"><button>退出登录</button></a>
         {% else %}
         <a href="/register">注册</a>
         <a href="/login">登录</a>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{note_info.get('title', '新建笔记')}}</title>
+</head>
+<body>
+    <div align="center">
+        <form action="/note/{{note_info.get('id', 'new')}}" method="POST">
+            <input type="text" placeholder="笔记标题" value="{{note_info.get('title', '')}}" name="title" style="text-align: center">
+            <br>
+            <textarea rows="10" placeholder="笔记内容" cols="30" style="margin-top: 10px" name="content">{{
+                note_info.get('content', '')
+            }}</textarea>
+            <br>
+            <a href="/note"><button type="button">返回</button></a>
+            <input type="submit" value="保存">
+        </form>
+    </div>
+
+</body>
+</html>

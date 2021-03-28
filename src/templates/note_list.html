@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <ul>
+        {% for note in note_list %}
+            <li>
+                <form action="/note/{{note.id}}/delete" method="POST">
+                    <button type="text"> 删除 </button>
+                    <a href="/note/{{ note.id }}">{{ note.get('title') }}</a>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/note/new"><button>创建笔记</button></a>
+    <a href="/"> <button>返回</button> </a>
+</body>
+</html>

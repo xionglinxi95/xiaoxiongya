@@ -44,6 +44,12 @@ class UserService:
             'expire_time': token_info['expire_time'],
         }
 
+    @classmethod
+    def get_user_id_by_token(cls, token):
+        user = cls.get_user_info(token)
+        uid = user.get('uid')
+        return uid
+
     @staticmethod
     def delete_token_info(token):
         UserTokenDao.delete_token_info(token)
@@ -70,6 +76,8 @@ class UserService:
             'token': token,
             'expire_time': expire_time,
         }
+
+
 
 if __name__ == '__main__':
     user_info = UserService.get_user_info('587f717872c511eba1d8c4b301c35c35')
